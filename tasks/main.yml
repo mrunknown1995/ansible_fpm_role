@@ -1,0 +1,17 @@
+
+---
+# tasks file for installation_and_configuration_fpm
+
+- name: Install FPM for Debian
+  apt:
+     name: "{{ item }}"
+     state: latest
+  loop:
+     - php-fpm
+     - php7.4
+     - php7.4-mysql
+     - php7.4-cgi
+     - php7.4-gd
+         
+    
+
